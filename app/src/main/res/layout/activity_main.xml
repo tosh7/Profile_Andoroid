@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/myImageView"
+        android:id="@+id/my_image_view"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="80dp"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/tobisuke" />
 
     <TextView
-        android:id="@+id/myText"
+        android:id="@+id/my_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -25,18 +25,64 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/my_image_view" />
 
-    <Button
-        android:id="@+id/myNameButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:autoText="false"
-        android:background="#13F7D2"
-        android:text="なまえ"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myText" />
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/my_text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/my_name_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autoText="false"
+                android:background="#13F7D2"
+                android:text="なまえ"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/my_like_sports_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#069EE7"
+                android:text="スポーツ"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/my_like_food_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#CF0BCB"
+                android:text="好きな食べ物"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/my_like_hobby_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#E00000"
+                android:text="趣味"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
